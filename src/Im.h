@@ -13,7 +13,6 @@ using namespace std;
 
 
 
-typedef  Im * Imm;
 
 class Im{
     int h, l;
@@ -24,7 +23,7 @@ public:
     virtual void print(ostream &os=cout)const ;
 };
 
-
+typedef  Im * Imm;
 
 
 
