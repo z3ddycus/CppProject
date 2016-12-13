@@ -10,15 +10,48 @@ using namespace std;
 #include<iostream>
 #include"OutIm.h"
 
+
+
+
+typedef  Im * Imm;
+
 class Im{
     int h, l;
-public: Im(int,int);
+public:
+    Im(int,int);
     virtual ~Im(){}
     virtual Im *clone()const;
     virtual void print(ostream &os=cout)const ;
 };
 
-typedef  Im * Imm;
+
+
+
+
+
+
+
+class Tr: public virtual  Im{
+    static int H;
+    int rg;
+public:
+    Tr(int, int) throw (OutTr);
+    inline void setrg(int);
+    static int getH();/* Ne peut pas etre const car non attachee a une instance*/
+    Tr *clone()const;
+    void print(ostream &os=cout)const ;
+protected:
+    void print_P(ostream &os=cout)const ;
+};
+inline void Tr::setrg(int a){rg=a;}
+
+
+
+
+
+
+
+
 
 class Br: public virtual Im{
     static int L;
@@ -30,20 +63,6 @@ protected:
     void print_P(ostream &os=cout)const;
 };
 
-class Tr: public virtual  Im{
-    static int H;
-    int rg;
-public:
-    Tr(int, int) throw (OutTr);
-    inline void setrg(int);
-    static int getH();/* Ne peut pas etre
- const car non attachee a une instance*/
-    Tr *clone()const;
-    void print(ostream &os=cout)const ;
-protected:
-    void print_P(ostream &os=cout)const ;
-};
-inline void Tr::setrg(int a){rg=a;}
 
 class TrBr: public Tr, public Br{
 public:

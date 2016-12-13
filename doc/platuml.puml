@@ -1,0 +1,55 @@
+@startuml
+
+interface OutIm {
+    + {abstract} notice();
+}
+
+class OutTr implements OutIm
+class OutBr implements OutIm
+
+class Im {
+    MODIFIABLE
+
+    h : int
+    l : int
+    
+    +Im(int, int)
+    +~Im()
+    +clone() : Im*
+    +print(ostream& = cout)
+}
+
+
+class Tr extends Im {
+    {static} H : int
+    rg : int
+    
+    +Tr(int, int) throw (OutTr)
+    +inline setrg(int)
+    +{static} getH : int
+    +clone() : Tr*
+    +print(ostream& = cout)
+    
+    #print_P(ostream& = cout)
+    
+}
+Tr --> OutTr
+
+class Br extends Im{
+    {static} L : int
+    
+    +Br(int, int) throw (OutBr)
+    +clone() : Br*
+    +print(ostream &=cout)
+    #print_P(ostream &=cout)
+}
+Br --> OutBr
+
+class Trbr extends Tr,Br {
+    +TrBr(int, int) throw(OutTr, OutBr)
+    +clone() : TrBr*
+    +print(ostream& = cout)
+}
+Trbr --> OutTr
+Trbr --> OutBr
+@enduml
