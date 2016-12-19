@@ -31,6 +31,7 @@ void Serializable::write() {
     }
   } catch(FileNameException const& e) {
     cout << e.serializable() << endl;
+    return;
   }
   ofstream writing;
   writing.open(getFile());

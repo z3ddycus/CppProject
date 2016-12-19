@@ -2,6 +2,7 @@
 // Created by z3ddycus on 19/12/16.
 //
 
+#include "Liste.h"
 #include "Im.h"
 #include "Bureau.h"
 #include "Appartement.h"
@@ -30,5 +31,13 @@ int main(void) {
     etageB.setFile("TestCpp.txt");
     etageB.write();
 
-
+    Liste<double> l = Liste<double>();
+    l.ajout(10);
+    l.ajout(20);
+    l.ajout(40);
+    cout << l.get(2) << endl;
+    l.set(2, 30);
+    cout << l.get(2) << endl;
+    l.remove(2);
+    l.get(2);
 }
