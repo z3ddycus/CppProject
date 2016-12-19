@@ -8,6 +8,10 @@ Serializable::Serializable() {
   filename = "";
 };
 
+Serializable::Serializable(Serializable const &s) {
+  filename = s.filename;
+}
+
 std::ostream& operator<<(std::ostream &strm, const Serializable &a) {
   return strm << "Class : Serializable" << endl << "Filename : " << a.filename << endl;
 }

@@ -2,6 +2,8 @@
 
 Im::Im(int a, int b):h(a),l(b){}
 
+Im::Im(Im const& im) : h(im.h), l(im.l){}
+
 Im *Im::clone()const{
     Im *p=new Im(*this);
     return p;

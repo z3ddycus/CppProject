@@ -9,6 +9,7 @@ private:
   const char* filename;
 public:
     Serializable();
+    Serializable(Serializable const& s);
     virtual ~Serializable(){}
     friend std::ostream& operator<<(std::ostream&, const Serializable&);
     const char* getFile();

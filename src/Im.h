@@ -18,6 +18,7 @@ class Im{
     int h, l;
 public:
     Im(int,int);
+    Im(Im const&);
     virtual ~Im(){}
     virtual Im *clone()const;
     virtual void print(ostream &os=cout)const ;
