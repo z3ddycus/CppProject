@@ -7,15 +7,15 @@
 
 #include <vector>
 #include <stdexcept>
+#include "Local.h"
 
 using namespace std;
 
-template <typename E>
 class Etage {
 private:
-    vector<E> etages;
+    vector<Local> etages;
 public:
-    E get(unsigned long i) const {
+    Local get(unsigned long i) const {
         if (i < 0 || i >= etages.size()) {
             throw invalid_argument("Unbound value in etages");
         }
@@ -24,19 +24,11 @@ public:
     unsigned long size() const {
         return etages.size();
     }
-    vector<E> getAlls() const;
-    void addLocal(E element);
+    vector<Local> getAlls() const;
+    void addLocal(Local element);
 };
 
-template <typename E>
-void Etage<E>::addLocal(E element) {
-    etages.push_back(element);
-}
 
-template <typename E>
-vector<E> Etage<E>::getAlls() const{
-    return etages;
-}
 
 
 #endif //PROJECT_ETAGE_H

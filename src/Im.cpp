@@ -34,7 +34,8 @@ void Br::print_P(ostream &c)const {
 
 int Tr::getH(){return H;}
 
-Tr::Tr(int h, int l) throw(OutTr):Im(h,l){
+Tr::Tr(int h, int l) throw(OutTr):Im(h,l) {
+
     if(h < H) throw OutTr();
 };
 
@@ -81,6 +82,11 @@ void TrBr::print(ostream &c)const {
 }
 
 int Tr::H=30;
+
+void Tr::addEtage(Etage etage) {
+    etages.push_back(etage);
+}
+
 int Br::L=100;
 
 ostream & operator<<(ostream &c,const Im &im){

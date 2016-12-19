@@ -7,3 +7,7 @@
 void Local::setName(const char *name) {
     this->name=name;
 }
+
+Local::Local(const char *name, localType type) : name(name), type(type){
+
+}

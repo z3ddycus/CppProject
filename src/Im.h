@@ -9,9 +9,7 @@
 using namespace std;
 #include<iostream>
 #include"OutIm.h"
-
-
-
+#include "Etage.h"
 
 
 class Im{
@@ -30,16 +28,20 @@ typedef  Im * Imm;
 
 
 
-
 class Tr: public virtual  Im{
     static int H;
     int rg;
+    vector<Etage> etages;
 public:
     Tr(int, int) throw (OutTr);
     inline void setrg(int);
     static int getH();/* Ne peut pas etre const car non attachee a une instance*/
     Tr *clone()const;
     void print(ostream &os=cout)const ;
+    void addEtage(Etage etage);
+    vector<Etage> getEtages() {
+        return etages;
+    }
 protected:
     void print_P(ostream &os=cout)const ;
 };

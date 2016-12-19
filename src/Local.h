@@ -5,22 +5,24 @@
 #ifndef PROJECT_LOCAL_H
 #define PROJECT_LOCAL_H
 
-enum localType {STUDIO, F2, F2bis, F3, F3bis, F4, F5};
-const static int nombrePiece[] = {1,2,2,3,3,4,5};
+
+#include "constantes.h"
+
 class Local {
 
 private :
     const localType type;
     const char* name;
 public:
-    void setName(const char* name);
-    const char* getName() const{
+    Local(const char* name = "Unnamed", localType type = STUDIO);
+    virtual void setName(const char* name);
+    virtual const char* getName() const{
         return name;
     }
-    localType getType() const {
+    virtual localType getType() const {
         return type;
     }
-    int getPieceNumber() const {
+    virtual int getPieceNumber() const {
         return nombrePiece[type];
     }
 };

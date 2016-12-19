@@ -8,8 +8,7 @@
 #include "Serializable.h"
 #include "Etage.h"
 
-template <typename T>
-class EtageSerializable<T> : Serializable, Etage {
+class EtageSerializable : public Serializable, public Etage {
 
 };
 
