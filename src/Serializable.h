@@ -5,13 +5,15 @@ using namespace std;
 #include <string>
 
 class Serializable{
-  const char *filename;
+private:
+  const char* filename;
 public:
     Serializable();
-    char* getFile() const;
-    void setFile(const char* file);
     virtual ~Serializable(){}
-    virtual void write() const;
+    friend std::ostream& operator<<(std::ostream&, const Serializable&);
+    const char* getFile();
+    void setFile(const char* file);
+    virtual void write();
 };
 
 #endif
