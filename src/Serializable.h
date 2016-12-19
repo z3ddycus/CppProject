@@ -10,7 +10,8 @@ private:
 public:
     Serializable();
     Serializable(Serializable const& s);
-    virtual ~Serializable(){}
+    virtual ~Serializable(){};
+    virtual void print(std::ostream& flux) = 0;
     friend std::ostream& operator<<(std::ostream&, const Serializable&);
     const char* getFile();
     void setFile(const char* file);

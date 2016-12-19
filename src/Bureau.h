@@ -7,14 +7,13 @@
 
 #include "Local.h"
 #include "constantes.h"
+#include <iostream>
+
+using namespace std;
 
 class Bureau : public Local {
 public:
     Bureau(const char* name = "unnamedBureau", localType type = STUDIO);
 };
-
-Bureau::Bureau(const char *name, localType type) : Local(name, type) {
-
-}
 
 #endif //PROJECT_BUREAU_H

@@ -8,7 +8,7 @@
 #include "EtageSerializable.h"
 
 int main(void) {
-    Etage etageA;
+    EtageSerializable etageA;
     etageA.addLocal(Bureau("BearStudio"));
     etageA.addLocal(Bureau("Saagie", F5));
     etageA.addLocal(Appartement("M. Bondu", F2));
@@ -16,12 +16,17 @@ int main(void) {
     etageB.addLocal(Bureau("StudioBagel"));
     etageB.addLocal(Bureau("Golden moustache", F5));
     etageB.addLocal(Appartement("Mme Nicart", F2));
-    Etage etageC;
+    EtageSerializable etageC;
     Tr tour(100, 10);
     tour.addEtage(etageA);
     tour.addEtage(etageB);
     tour.addEtage(etageC);
-
+    cout << "etageA" << endl;
+    etageA.print(cout);
+    cout << "etageB" << endl;
+    etageB.print(cout);
+    cout << "etageC" << endl;
+    etageC.print(cout);
     etageB.setFile("TestCpp.txt");
     etageB.write();
 

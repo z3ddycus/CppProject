@@ -9,7 +9,9 @@
 #include "Etage.h"
 
 class EtageSerializable : public Serializable, public Etage {
-
+public:
+    void print(std::ostream& flux);
 };
+
 
 #endif //PROJECT_ETAGESERIALIZABLE_H

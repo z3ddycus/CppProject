@@ -19,7 +19,7 @@ public:
         if (i < 0 || i >= etages.size()) {
             throw invalid_argument("Unbound value in etages");
         }
-        return etages[i];
+        return etages.at(i);
     }
     unsigned long size() const {
         return etages.size();

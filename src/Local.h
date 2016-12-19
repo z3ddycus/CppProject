@@ -7,6 +7,9 @@
 
 
 #include "constantes.h"
+#include <iostream>
+
+using namespace std;
 
 class Local {
 
@@ -14,6 +17,7 @@ private :
     const localType type;
     const char* name;
 public:
+    virtual void print(ostream& flux);
     Local(const char* name = "Unnamed", localType type = STUDIO);
     virtual void setName(const char* name);
     virtual const char* getName() const{
