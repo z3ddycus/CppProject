@@ -9,11 +9,7 @@
 #include "Etage.h"
 
 template <typename T>
-class EtageSerializable : Serializable, Etage {
-public:
-    EtageSerializable(const char *filename) : Serializable(filename) {
-
-    }
+class EtageSerializable<T> : Serializable, Etage {
 
 };
 
