@@ -4,7 +4,6 @@
 
 #include "util/Liste.h"
 #include "origine/Im.h"
-#include "etage/Etage.h"
 #include "etage/Bureau.h"
 #include "etage/Appartement.h"
 
@@ -22,19 +21,7 @@ int main(void) {
     tour.addEtage(etageA);
     tour.addEtage(etageB);
     tour.addEtage(etageC);
-    //tour.printS(cout);
+    tour.printS(cout);
     tour.setFile((char*) "./test.txt");
     tour.write();
-
-    Liste<int> l = Liste<int>();
-    l.ajout(10);
-    l.ajout(20);
-    l.ajout(40);
-
-    ListeIterator<int> li = l.begin();
-    ListeIterator<int> lend = l.end();
-    while(li != lend) {
-        cout << *li << endl;
-        li++;
-    }
 }

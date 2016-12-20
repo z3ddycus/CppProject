@@ -14,7 +14,8 @@ Liste<Local> Etage::getAlls() const{
 }
 
 void Etage::print(ostream &flux) {
-    for (int i = 0; i < locaux.getSize(); ++i) {
+    int i = 0;
+    for (ListeIterator<Local> it = locaux.begin(); it != locaux.end(); it++, ++i) {
         flux << "\t\tLocal " << i << " : ";
         locaux.get(i).print(flux);
     }

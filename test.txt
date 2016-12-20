@@ -8,3 +8,19 @@ Affichage de la tour
 		Local 1 : 	Golden moustache avec 5 pièces
 		Local 2 : 	Mme Nicart avec 2 pièces
 	Etage 2
+Affichage de la tour
+	Etage 0
+		Local 0 : 	BearStudio avec 1 pièce
+		Local 1 : 	Saagie avec 5 pièces
+		Local 2 : 	M. Bondu avec 2 pièces
+		Local 0 : 	BearStudio avec 1 pièce
+		Local 1 : 	Saagie avec 5 pièces
+		Local 2 : 	M. Bondu avec 2 pièces
+	Etage 1
+		Local 0 : 	StudioBagel avec 1 pièce
+		Local 1 : 	Golden moustache avec 5 pièces
+		Local 2 : 	Mme Nicart avec 2 pièces
+		Local 0 : 	StudioBagel avec 1 pièce
+		Local 1 : 	Golden moustache avec 5 pièces
+		Local 2 : 	Mme Nicart avec 2 pièces
+	Etage 2
