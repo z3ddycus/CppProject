@@ -1,0 +1,114 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/z3ddycus/Bureau/Projet Cpp/Project/src/etage/Appartement.cpp
+Appartement.h
+/home/z3ddycus/Bureau/Projet Cpp/Project/src/etage/Appartement.h
+
+/home/z3ddycus/Bureau/Projet Cpp/Project/src/etage/Appartement.h
+constantes.h
+/home/z3ddycus/Bureau/Projet Cpp/Project/src/etage/constantes.h
+Local.h
+/home/z3ddycus/Bureau/Projet Cpp/Project/src/etage/Local.h
+
+/home/z3ddycus/Bureau/Projet Cpp/Project/src/etage/Bureau.cpp
+Bureau.h
+/home/z3ddycus/Bureau/Projet Cpp/Project/src/etage/Bureau.h
+
+/home/z3ddycus/Bureau/Projet Cpp/Project/src/etage/Bureau.h
+Local.h
+/home/z3ddycus/Bureau/Projet Cpp/Project/src/etage/Local.h
+constantes.h
+/home/z3ddycus/Bureau/Projet Cpp/Project/src/etage/constantes.h
+
+/home/z3ddycus/Bureau/Projet Cpp/Project/src/etage/Etage.cpp
+Etage.h
+/home/z3ddycus/Bureau/Projet Cpp/Project/src/etage/Etage.h
+
+/home/z3ddycus/Bureau/Projet Cpp/Project/src/etage/Etage.h
+vector
+-
+stdexcept
+-
+Local.h
+/home/z3ddycus/Bureau/Projet Cpp/Project/src/etage/Local.h
+../util/Liste.h
+/home/z3ddycus/Bureau/Projet Cpp/Project/src/util/Liste.h
+
+/home/z3ddycus/Bureau/Projet Cpp/Project/src/etage/Local.cpp
+cstring
+-
+Local.h
+/home/z3ddycus/Bureau/Projet Cpp/Project/src/etage/Local.h
+
+/home/z3ddycus/Bureau/Projet Cpp/Project/src/etage/Local.h
+constantes.h
+/home/z3ddycus/Bureau/Projet Cpp/Project/src/etage/constantes.h
+iostream
+-
+
+/home/z3ddycus/Bureau/Projet Cpp/Project/src/etage/constantes.h
+
+/home/z3ddycus/Bureau/Projet Cpp/Project/src/main.cpp
+origine/Im.h
+/home/z3ddycus/Bureau/Projet Cpp/Project/src/origine/Im.h
+
+/home/z3ddycus/Bureau/Projet Cpp/Project/src/origine/Im.cpp
+Im.h
+/home/z3ddycus/Bureau/Projet Cpp/Project/src/origine/Im.h
+
+/home/z3ddycus/Bureau/Projet Cpp/Project/src/origine/Im.h
+iostream
+-
+OutIm.h
+/home/z3ddycus/Bureau/Projet Cpp/Project/src/origine/OutIm.h
+../etage/Etage.h
+/home/z3ddycus/Bureau/Projet Cpp/Project/src/etage/Etage.h
+../util/Serializable.h
+/home/z3ddycus/Bureau/Projet Cpp/Project/src/util/Serializable.h
+
+/home/z3ddycus/Bureau/Projet Cpp/Project/src/origine/OutIm.cpp
+iostream
+-
+OutIm.h
+/home/z3ddycus/Bureau/Projet Cpp/Project/src/origine/OutIm.h
+
+/home/z3ddycus/Bureau/Projet Cpp/Project/src/origine/OutIm.h
+
+/home/z3ddycus/Bureau/Projet Cpp/Project/src/util/FileNameException.h
+exception
+-
+string
+-
+
+/home/z3ddycus/Bureau/Projet Cpp/Project/src/util/Liste.h
+iostream
+-
+OutOfRangeException.h
+/home/z3ddycus/Bureau/Projet Cpp/Project/src/util/OutOfRangeException.h
+
+/home/z3ddycus/Bureau/Projet Cpp/Project/src/util/OutOfRangeException.h
+exception
+-
+
+/home/z3ddycus/Bureau/Projet Cpp/Project/src/util/Serializable.cpp
+iostream
+-
+fstream
+-
+Serializable.h
+/home/z3ddycus/Bureau/Projet Cpp/Project/src/util/Serializable.h
+FileNameException.h
+/home/z3ddycus/Bureau/Projet Cpp/Project/src/util/FileNameException.h
+
+/home/z3ddycus/Bureau/Projet Cpp/Project/src/util/Serializable.h
+string
+-
+iostream
+-
+

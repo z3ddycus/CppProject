@@ -1,8 +1,8 @@
-cmake_minimum_required(VERSION 3.6)
+cmake_minimum_required(VERSION 3.5)
 project(Project)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
-set(SOURCE_FILES src/Im.cpp src/Im.h src/OutIm.cpp src/OutIm.h src/constantes.h src/Etage.cpp src/Etage.h src/Serializable.cpp src/Serializable.h src/FileNameException.h src/EtageSerializable.cpp src/EtageSerializable.h src/Local.cpp src/Local.h src/Appartement.cpp src/Appartement.h src/Bureau.cpp src/Bureau.h src/OutOfRangeException.h src/Liste.h )
-add_executable(MainFinal src/mainFinal.cpp ${SOURCE_FILES})
-add_executable(MainOriginal src/mainOriginal.cpp ${SOURCE_FILES})
+set(SOURCE_FILES src/origine/Im.cpp src/origine/Im.h src/origine/OutIm.cpp src/origine/OutIm.h src/etage/constantes.h src/etage/Etage.cpp src/etage/Etage.h src/util/Serializable.cpp src/util/Serializable.h src/util/FileNameException.h src/etage/Local.cpp src/etage/Local.h src/etage/Appartement.cpp src/etage/Appartement.h src/etage/Bureau.cpp src/etage/Bureau.h src/util/OutOfRangeException.h src/util/Liste.h )
+add_executable(mainFinal src/mainFinal.cpp ${SOURCE_FILES})
+add_executable(main src/main.cpp ${SOURCE_FILES})
