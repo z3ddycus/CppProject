@@ -25,4 +25,16 @@ int main(void) {
     //tour.printS(cout);
     tour.setFile((char*) "./test.txt");
     tour.write();
+
+    Liste<int> l = Liste<int>();
+    l.ajout(10);
+    l.ajout(20);
+    l.ajout(40);
+
+    ListeIterator<int> li = l.begin();
+    ListeIterator<int> lend = l.end();
+    while(li != lend) {
+        cout << *li << endl;
+        li++;
+    }
 }

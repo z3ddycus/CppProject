@@ -35,6 +35,42 @@ public:
 };
 
 template <typename E>
+class ListeIterator:iterator<forward_iterator_tag, ListeMembre<E>*> {
+
+    ListeMembre<E>* itr;
+public:
+    ListeIterator<E>():itr(nullptr){};
+    ListeIterator<E>(ListeMembre<E>* lmp){itr = lmp;};
+    ListeIterator<E>(const ListeIterator<E>& li){itr = li.itr;};
+    E& operator*() {
+        E e = itr->getE();
+        E &f = e;
+        return f;
+    };
+    E& operator->() {
+        E e = itr->getE();
+        E &f = e;
+        return f;
+    }
+    bool operator==(const ListeIterator<E>& li) {
+        return itr == li.itr;
+    };
+    bool operator!=(const ListeIterator<E>& li) {
+      return itr != li.itr;
+    };
+    ListeIterator<E>& operator++() {
+        itr = itr->getNext();
+        return *this;
+    }
+    ListeIterator<E> operator++(int) {
+        ListeIterator<E> result(*this);
+        itr = itr->getNext();
+        return result;
+    }
+
+};
+
+template <typename E>
 class Liste {
 private:
     ListeMembre<E>* tete;
@@ -111,6 +147,12 @@ public:
             return 0;
         }
     };
+    ListeIterator<E> begin() {
+        return ListeIterator<E>(tete);
+    }
+    ListeIterator<E> end() {
+        return ListeIterator<E>();
+    }
 };
 
 #endif //PROJECT_LISTE_H
